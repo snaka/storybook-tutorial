@@ -1,4 +1,11 @@
 import '../src/index.css';
+import { initialize, mswDecorator } from 'msw-storybook-addon';
+
+// Initialize the MSW addon.
+initialize();
+
+// Register the MSW decorator globally.
+export const decorators = [mswDecorator];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
